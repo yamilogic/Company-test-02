@@ -29,7 +29,7 @@ export default function BlogGrid() {
   return (
     <div className="flex-1 min-w-0 flex flex-col gap-6">
       {/* Tabs */}
-      <div className="flex flex-wrap gap-2">
+      <div className="flex justify-end flex-wrap gap-2">
         {tabs.map((tab) => (
           <button
             key={tab}
