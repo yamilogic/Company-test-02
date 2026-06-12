@@ -10,18 +10,23 @@ const DownloadSection = () => {
         <div className="flex flex-col md:flex-row items-center justify-around gap-8 md:gap-6">
 
          {/* LEFT CONTENT */}
-<div className="flex flex-col gap-5 w-full md:max-w-xs z-10 items-center text-center md:items-start md:text-left">
+<div className="flex flex-col gap-5 w-full md:max-w-[520px] z-10 items-center text-center md:items-start md:text-left">  {/* Achievement badge */}
+ <div className="flex items-center gap-1 sm:gap-2 w-fit bg-[#F3F4F6] rounded-full px-2 sm:px-3 py-1 whitespace-nowrap">
+  <span className="text-[#9DA3B7] rounded-full p-1 text-[12px] sm:text-[14px] bg-white font-medium">
+    Achievement
+  </span>
 
-  {/* Achievement badge */}
-  <div className="flex items-center gap-2 w-fit bg-[#F3F4F6] rounded-full px-3 py-1">
-    <span className="text-[#9DA3B7] rounded-full p-1 text-[14px] bg-white font-medium">Achievement</span>
-    <div className="w-px h-3 bg-zinc-200" />
-    <span className="text-[#9DA3B7] text-[14px] font-medium">Rated No.1 App of 2025</span>
-    <span className="text-zinc-400 text-[14px]"><ArrowRight size={20}/></span>
-  </div>
+  <div className="w-px h-3 bg-zinc-200" />
+
+  <span className="text-[#9DA3B7] text-[12px] sm:text-[14px] font-medium whitespace-nowrap">
+    Rated No.1 App of 2025
+  </span>
+
+  <ArrowRight size={16} className="text-zinc-400 sm:w-5 sm:h-5" />
+</div>
 
   {/* Headline */}
-  <div className="flex items-center gap-2 justify-center w-full md:w-100 gap-0">
+  <div className="flex flex-col w-full items-center md:items-start">
     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#43495B] leading-tight tracking-tight">
       Download Riala Pay
     </h1>
@@ -37,7 +42,7 @@ const DownloadSection = () => {
   </p>
 
   {/* Buttons */}
- <div className="flex sm:flex-row md:flex-col lg:flex-row items-stretch gap-3 w-full md:w-auto">
+ <div className="flex flex-col sm:flex-col md:flex-col lg:flex-row items-stretch gap-3 w-full md:w-auto">
 
   {/* IOS Button */}
   <button
@@ -119,14 +124,30 @@ const DownloadSection = () => {
 </div>
 
         {/* RIGHT: Mobile image */}
-<div className="relative flex items-center justify-center md:justify-end flex-1 w-full h-80 sm:h-96 md:h-80 lg:h-[420px] md:pr-6 lg:-ml-10"> 
-  
+<div
+  className="
+    relative
+    flex items-center justify-center md:justify-end
+    flex-1 w-full
+    h-[240px]
+    sm:h-[300px]
+    md:h-[340px]
+    lg:h-[420px]
+  "
+>
   <Image
-  className="h-full w-full sm:w-auto object-contain lg:-translate-x-8"
     src={Merged}
     alt="mobile"
-    width={150}
-    height={150}
+    className="
+      object-contain
+      w-[220px]
+      sm:w-[280px]
+      md:w-[360px]
+      lg:w-[500px]
+      h-auto
+      lg:-translate-x-6
+    "
+    priority
   />
 </div>
 
