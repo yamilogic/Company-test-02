@@ -5,7 +5,7 @@ import stats from "../public/Stats.png"
 
 const Why = () => {
   return (
-    <section className="w-full bg-[#F3F4F6] md:mt-36 mt-28 px-4 sm:px-6 lg:px-22 py-6">
+    <section id="whyrelay" className="w-full bg-[#F3F4F6] md:mt-36 mt-28 px-4 sm:px-6 lg:px-22 py-6">
 
       <div className="relative w-full h-100 bg-zinc-800 rounded-[1.5rem] pt-8 pb-24 overflow-hidden">
 

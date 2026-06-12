@@ -31,7 +31,7 @@ export default function Navbar() {
             <li key={link.label}>
               <Link
                 href={link.href}
-                className="text-[13.5px] text-slate-400 hover:text-gray-600 px-3 py-1.5 rounded-md hover:bg-gray-50 transition-all font-regular"
+                className="text-[13.5px] text-slate-400 hover:text-gray-600 px-3 py-1.5 rounded-md hover:bg-gray-50 transition-all duration-300 font-regular"
               >
                 {link.label}
               </Link>

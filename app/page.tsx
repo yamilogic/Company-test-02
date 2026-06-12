@@ -20,7 +20,7 @@ import Why from "../home/Why"
 const Home = () => {
   return (
     
-    <div>
+    <div className='transition-all duration-300'>
       
       <Hero/>
       <Marquee/>
