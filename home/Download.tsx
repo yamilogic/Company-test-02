@@ -10,8 +10,7 @@ const DownloadSection = () => {
         <div className="flex flex-col md:flex-row items-center justify-around gap-8 md:gap-6">
 
          {/* LEFT CONTENT */}
-<div className="flex flex-col gap-5 w-full md:max-w-xs z-10 items-center text-center md:items-start md:text-left">
-
+<div className="flex flex-col gap-5 w-full md:max-w-[520px] z-10 items-center text-center md:items-start md:text-left">
   {/* Achievement badge */}
   <div className="flex items-center gap-2 w-fit bg-[#F3F4F6] rounded-full px-3 py-1">
     <span className="text-[#9DA3B7] rounded-full p-1 text-[14px] bg-white font-medium">Achievement</span>
@@ -21,8 +20,7 @@ const DownloadSection = () => {
   </div>
 
   {/* Headline */}
-  <div className="flex items-center gap-2 justify-center w-full md:w-100 gap-0">
-    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#43495B] leading-tight tracking-tight">
+<div className="flex flex-col w-full items-center md:items-start">    <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#43495B] leading-tight tracking-tigh">
       Download Riala Pay
     </h1>
     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#43495B] leading-tight tracking-tight">
