@@ -12,16 +12,14 @@ export default function BlogHeader() {
         ))}
       </div>
       <div className="relative z-10">
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">
-          Discover Educational{" "}
+<h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">          Discover Educational{" "}
           <span className="relative inline-block">
             <span className="relative z-10 text-blue-600">Articles</span>
             <span className="absolute inset-x-0 bottom-1 h-3 bg-blue-100 rounded -z-0" />
           </span>{" "}
           here
         </h1>
-        <p className="mt-3 text-sm text-gray-400 max-w-md mx-auto">
-          Simplify your payments with Riala Pay. Paying bills and making transactions has never been easier.
+<p className="mt-3 text-sm text-gray-400 max-w-[280px] sm:max-w-md mx-auto">          Simplify your payments with Riala Pay. Paying bills and making transactions has never been easier.
         </p>
       </div>
     </div>
