@@ -13,16 +13,16 @@ const Hero = () => {
       <div className="hidden lg:block relative">
 
         {/* Background circles */}
-        <div className="absolute left-1/2 -translate-x-1/2 top-[40%] -translate-y-1/2 rounded-full border border-zinc-300/50 bg-transparent pointer-events-none"
-          style={{ width: '680px', height: '680px' }} />
-        <div className="absolute left-1/2 -translate-x-1/2 top-[40%] -translate-y-1/2 rounded-full border border-zinc-300/40 bg-zinc-50/30 pointer-events-none"
-          style={{ width: '520px', height: '520px' }} />
-        <div className="absolute left-1/2 -translate-x-1/2 top-[40%] -translate-y-1/2 rounded-full bg-zinc-50/60 pointer-events-none"
-          style={{ width: '370px', height: '370px' }} />
+        <div className="absolute left-1/2 -translate-x-1/2 top-[55%] -translate-y-1/2 rounded-full border border-zinc-300/50 pointer-events-none"
+          style={{ width: '1275px', height: '1275px' }} />
+        <div className="absolute left-1/2 -translate-x-1/2 top-[55%] -translate-y-1/2 rounded-full border border-zinc-300/40 pointer-events-none"
+          style={{ width: '625px', height: '625px' }} />
+        <div className="absolute left-[47%] -translate-x-1/2 top-[65%] -translate-y-1/2 rounded-full pointer-events-none"
+          style={{ width: '380px', height: '380px' }} />
 
         {/* Title */}
         <div className="flex flex-col items-center gap-4 pt-2">
-          <h1 className="text-8xl font-['satoshi'] mr-56 tracking-tight text-[#43495B]">Welcome</h1>
+          <h1 className="text-9xl font-['satoshi'] mr-56 tracking-tight text-[#43495B]">Welcome</h1>
           <div className="flex gap-4 mr-20">
             <div className="relative mr-28 mt-14 z-10">
               <div className="relative rounded-[2rem] shadow-xl shadow-zinc-300/60 overflow-visible bg-white w-[80px] h-[95px]">
@@ -30,7 +30,7 @@ const Hero = () => {
                   className="absolute -top-3 left-0 w-full object-cover object-top" />
               </div>
             </div>
-            <h1 className="text-8xl ml-10 font-['satoshi'] z-2 tracking-tight text-[#43495B]">To Riala</h1>
+            <h1 className="text-9xl ml-10 font-['satoshi'] z-2 tracking-tight text-[#43495B]">To Riala</h1>
           </div>
         </div>
 
@@ -39,7 +39,7 @@ const Hero = () => {
           <h1 className="font-semibold font-['inter'] text-[#43495B] text-2xl z-10 relative">
             The ultimate finance <br /> application is here...
           </h1>
-          <Image className="absolute top-0 left-0 translate-x-115 translate-y-44 z-10"
+          <Image className="absolute top-14 left-0 translate-x-115 translate-y-44 z-10"
             src={HandMobile} alt="HandMobile" width={440} height={440} />
           <div className="flex flex-col gap-4 z-10 relative">
             <div className="relative w-[95px] h-[100px] -translate-x-36 rounded-[22px] bg-[#FAFAFA] shadow-lg overflow-visible">

@@ -8,13 +8,13 @@ const CTABanner = () => {
       <div className="relative bg-[#5A81FA] rounded-[4rem] max-w-6xl mx-auto min-h-[280px] sm:min-h-[320px] flex items-center overflow-hidden md:overflow-visible">
 
         {/* Phone — only on md+ */}
-        <div className="hidden md:block absolute -left-4 lg:left-6 -bottom-0 z-10 h-full">
+        <div className="hidden md:block absolute -left-4 md:-top-10 lg:left-22 -bottom-0 z-10 h-full">
           <Image
             src={phoneImg}
             alt="Riala Pay App"
             width={280}
             height={560}
-            className="h-[110%] w-auto object-contain -translate-y-[5%]"
+            className="h-[135%] w-auto object-contain -translate-y-[5%]"
             priority
           />
         </div>

@@ -17,9 +17,13 @@ const features = [
   },
   {
     icon: (
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b7fc4" strokeWidth="1.5">
-        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-      </svg>
+      <Image
+        src={Pocket}
+        alt="Pocket"
+        width={15}
+        height={15}
+        className="object-contain bg-blue-500"
+      />
     ),
     title: "Pockets",
     desc: "Simplify you payments with Riala Pay, Paying bills nad making transactions has never been easier.",
@@ -51,7 +55,8 @@ const CoreFeatures = () => {
             Core Features
           </p>
 
-<h2 className="text-4xl lg:text-5xl font-bold text-[#43495B] leading-tight max-w-[650px]">  Here's How We Are{" "}
+<h2 className="text-4xl lg:text-5xl font-bold text-[#43495B] leading-tight max-w-[700px]">  
+  Here's How We Are{" "}
             <span className="relative inline-block overflow-hidden bg-[#CBD7FD] text-[#5A81FA] px-2 py-1 rounded-full h-[52px] align-middle">
               <div
                 className="transition-transform duration-700 ease-in-out"
@@ -126,11 +131,21 @@ const CoreFeatures = () => {
   className="flex flex-col gap-3 items-center text-center lg:items-start lg:text-left py-2"
 >
   <div className="w-12 h-12 rounded-2xl bg-[#EBF0FE] flex items-center justify-center shrink-0">
-    {f.icon}
+     {f.title === "Pockets" ? (
+    <Image
+      src={Pocket}
+      alt="Pocket"
+      width={22}
+      height={22}
+      className="object-contain"
+    />
+  ) : (
+    f.icon
+  )}
   </div>
 
   <h3 className="text-lg font-semibold text-zinc-800">
-    {f.title}
+    { f.title}
   </h3>
 
   <p className="text-sm text-zinc-400 leading-relaxed max-w-[300px]">
