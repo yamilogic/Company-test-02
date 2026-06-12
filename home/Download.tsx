@@ -55,10 +55,10 @@ const DownloadSection = () => {
   <div className="flex items-center gap-3">
     <div className="flex -space-x-2">
       {[
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face',
-        'https://images.unsplash.com/photo-1494790108755-2616b612b647?w=40&h=40&fit=crop&crop=face',
-        'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face',
-      ].map((src, i) => (
+  'https://images.unsplash.com/photo-1500648767791-dc71a4c0a6f3?w=40&h=40&fit=crop&crop=face',
+  'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face',
+  'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=40&h=40&fit=crop&crop=face',
+].map((src, i) => (
         <div key={i} className="w-8 h-8 rounded-full border-2 border-white overflow-hidden">
           <Image src={src} alt="user" className="w-full h-full object-cover" width={100} height={100} />
         </div>
@@ -69,9 +69,10 @@ const DownloadSection = () => {
 </div>
 
         {/* RIGHT: Mobile image */}
-<div className="relative flex items-center justify-center md:justify-end flex-1 w-full h-80 sm:h-96 md:h-80 lg:h-[420px] md:pr-6">
+<div className="relative flex items-center justify-center md:justify-end flex-1 w-full h-80 sm:h-96 md:h-80 lg:h-[420px] md:pr-6 lg:-ml-10"> 
+  
   <Image
-    className="h-full w-full sm:w-auto object-contain"
+  className="h-full w-full sm:w-auto object-contain lg:-translate-x-8"
     src={Merged}
     alt="mobile"
     width={150}
