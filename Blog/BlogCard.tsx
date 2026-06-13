@@ -42,7 +42,7 @@ export default function BlogCard({ image, title, excerpt, date, isNew }: BlogCar
         </div>
         <div className="p-4">
           <p className="text-[11px] text-gray-400">{date}</p>
-          <h3 className="font-bold text-sm mt-1 leading-snug">{title}</h3>
+          <h3 className="font-bold text-sm text-zinc-800 mt-1 leading-snug">{title}</h3>
           <p className="text-xs text-gray-400 mt-1.5 line-clamp-2">{excerpt}</p>
         </div>
       </div>

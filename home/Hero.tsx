@@ -5,7 +5,7 @@ import mobile2 from "../public/Mobile2.png"
 import man from "../public/man.png"
 import girl from "../public/girl.png"
 
-import { Phone } from "lucide-react"
+import { Phone, Play } from "lucide-react"
 
 const Hero = () => {
   return (
@@ -52,8 +52,8 @@ const Hero = () => {
               Simplify your payment with Riala Pay, Paying bills and <br /> making transactions has never been easier.
             </div>
             <div className="flex items-center gap-2 -translate-x-36">
-              <div className="px-3 py-1 w-fit h-fit font-medium text-xs rounded-2xl bg-[#43495B] text-white cursor-pointer">Watch Tizer</div>
-              <div className="px-3 py-1 w-fit h-fit font-medium text-xs rounded-2xl text-zinc-800 bg-zinc-50 border border-zinc-300 cursor-pointer">Contact Us</div>
+              <div className="px-5 py-2 flex items-center justify-center gap-2 font-medium text-xs rounded-xl bg-[#43495B] hover:bg-[#43495B]/85 text-white cursor-pointer"> <Play size={15}/> Watch Tizer</div>
+              <div className="px-5 py-2 flex items-center justify-center gap-2 font-medium text-xs rounded-xl text-zinc-800 bg-zinc-50 border hover:bg-zinc-100 border-zinc-300 cursor-pointer"> <Phone size={15}/> Contact Us</div>
             </div>
           </div>
         </div>
@@ -137,12 +137,12 @@ const Hero = () => {
           </div>
 
           {/* Circles */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-zinc-300/50 pointer-events-none z-10"
-            style={{ width: '310px', height: '310px' }} />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-zinc-300/40 bg-zinc-50/20 pointer-events-none z-10"
-            style={{ width: '230px', height: '230px' }} />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-zinc-50/60 pointer-events-none z-10"
-            style={{ width: '155px', height: '155px' }} />
+          <div className="absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-zinc-300/50 pointer-events-none z-10"
+            style={{ width: '500px', height: '500px' }} />
+          <div className="absolute top-[82%] left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border bg-zinc-100/10 border-zinc-300/40 pointer-events-none z-10"
+            style={{ width: '480px', height: '480px' }} />
+          <div className="absolute top-[68%] left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-zinc-50/60 pointer-events-none z-10"
+            style={{ width: '300px', height: '300px' }} />
 
           {/* Main phone — front, shifted slightly right */}
           <div className="relative z-30 top-2" style={{ transform: 'translateX(-8%)' }}>
