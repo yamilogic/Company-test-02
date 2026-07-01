@@ -33,56 +33,48 @@ const Logo = ({ p }: { p: typeof partners[0] }) => {
   return <span className={`${base} text-base md:text-lg font-semibold`}>{p.name}</span>;
 };
 
-const Partners = () => {
+const MarqueeTrack = ({ gap = "gap-10" }: { gap?: string }) => {
   const all = [...partners, ...partners, ...partners];
-
   return (
-    <div className="w-full bg-zinc-100 border-t border-zinc-200 overflow-hidden">
-
-      {/* ── DESKTOP (lg+): text LEFT fixed, logos marquee RIGHT ── */}
-      <div className="hidden lg:flex items-center gap-8 p-22">
-
-        {/* Fixed LEFT text — bigger on desktop */}
-        <p className="text-[#8B90A7] text-md md:text-md font-medium leading-relaxed shrink-0">
-          WE ARE PARTENDED WITH MORE THAN 50+ <br /> COMPANIES AROUND THE GLOBE.
-        </p>
-
-        {/* Divider */}
-        <div className="w-px h-8 bg-zinc-300 shrink-0" />
-
-        {/* Marquee right side */}
-        <div className="flex-1 overflow-hidden">
-          <div className="flex items-center gap-10 animate-marquee whitespace-nowrap">
-            {all.map((p, i) => <Logo key={i} p={p} />)}
-          </div>
-        </div>
+    <div className="overflow-hidden flex-1">
+      <div className={`flex items-center ${gap} animate-marquee whitespace-nowrap`}>
+        {all.map((p, i) => <Logo key={i} p={p} />)}
       </div>
-
-      {/* ── MOBILE + TABLET (below lg): text top, logos below ── */}
-      <div className="flex lg:hidden flex-col gap-3 px-4 py-4">
-        <p className="text-[#8B90A7] text-sm font-medium leading-relaxed text-center">
-          WE ARE PARTENDED WITH MORE THAN 50+ COMPANIES AROUND THE GLOBE.
-        </p>
-        <div className="w-full h-px bg-zinc-200" />
-        <div className="overflow-hidden">
-          <div className="flex items-center gap-6 md:gap-8 animate-marquee whitespace-nowrap">
-            {all.map((p, i) => <Logo key={i} p={p} />)}
-          </div>
-        </div>
-      </div>
-
-      <style>{`
-        @keyframes marquee {
-          0%   { transform: translateX(0); }
-          100% { transform: translateX(-33.333%); }
-        }
-        .animate-marquee {
-          animation: marquee 18s linear infinite;
-          width: max-content;
-        }
-      `}</style>
     </div>
   );
 };
+
+const Partners = () => (
+  <div className="w-full bg-zinc-100 border-t border-zinc-200 overflow-hidden">
+    {/* ── DESKTOP (lg+): text LEFT fixed, logos marquee RIGHT ── */}
+    <div className="hidden lg:flex items-center gap-8 p-22">
+      <p className="text-[#8B90A7] text-md md:text-md font-medium leading-relaxed shrink-0">
+        WE ARE PARTENDED WITH MORE THAN 50+ <br /> COMPANIES AROUND THE GLOBE.
+      </p>
+      <div className="w-px h-8 bg-zinc-300 shrink-0" />
+      <MarqueeTrack />
+    </div>
+
+    {/* ── MOBILE + TABLET (below lg): text top, logos below ── */}
+    <div className="flex lg:hidden flex-col gap-3 px-4 py-4">
+      <p className="text-[#8B90A7] text-sm font-medium leading-relaxed text-center">
+        WE ARE PARTENDED WITH MORE THAN 50+ COMPANIES AROUND THE GLOBE.
+      </p>
+      <div className="w-full h-px bg-zinc-200" />
+      <MarqueeTrack gap="gap-6 md:gap-8" />
+    </div>
+
+    <style>{`
+      @keyframes marquee {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-33.333%); }
+      }
+      .animate-marquee {
+        animation: marquee 18s linear infinite;
+        width: max-content;
+      }
+    `}</style>
+  </div>
+);
 
 export default Partners;

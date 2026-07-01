@@ -1,38 +1,14 @@
 "use client"
-import { ArrowUpDown, TicketCheck, User, Palette, Phone, Play } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
+import { ArrowUpDown, TicketCheck, User, Phone, Play } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Pocket from "@/assets/features/pocket.png"
 
 const features = [
-    {
-        icon: <User size={20} stroke="#5A81FA" />,
-        title: "User Friendly",
-        desc: "Simplify you payments with Riala Pay, Paying bills nad making transactions has never been easier.",
-    },
-    {
-        icon: <TicketCheck size={20} stroke="#5A81FA" />,
-        title: "Transaction Detail",
-        desc: "Simplify you payments with Riala Pay, Paying bills nad making transactions has never been easier.",
-    },
-    {
-        icon: (
-            <Image
-                src={Pocket}
-                alt="Pocket"
-                width={13}
-                height={13}
-                className="object-contain bg-blue-500"
-            />
-        ),
-        title: "Pockets",
-        desc: "Simplify you payments with Riala Pay, Paying bills nad making transactions has never been easier.",
-    },
-    {
-        icon: <ArrowUpDown size={20} stroke="#5A81FA" />,
-        title: "Send/Request",
-        desc: "Simplify you payments with Riala Pay, Paying bills nad making transactions has never been easier.",
-    },
+    { icon: <User size={20} stroke="#5A81FA" />, title: "User Friendly", desc: "Simplify you payments with Riala Pay, Paying bills nad making transactions has never been easier." },
+    { icon: <TicketCheck size={20} stroke="#5A81FA" />, title: "Transaction Detail", desc: "Simplify you payments with Riala Pay, Paying bills nad making transactions has never been easier." },
+    { icon: "pocket", title: "Pockets", desc: "Simplify you payments with Riala Pay, Paying bills nad making transactions has never been easier." },
+    { icon: <ArrowUpDown size={20} stroke="#5A81FA" />, title: "Send/Request", desc: "Simplify you payments with Riala Pay, Paying bills nad making transactions has never been easier." },
 ];
 
 const CoreFeatures = () => {
@@ -47,7 +23,7 @@ const CoreFeatures = () => {
     }, []);
 
     return (
-        <div id="features" className="w-full sm:mt-28 md:mt-36 bg-white hi'] px-6 py-12 sm:px-16 sm:py-16 lg:px-24">
+        <div id="features" className="w-full sm:mt-28 md:mt-36 bg-white px-6 py-12 sm:px-16 sm:py-16 lg:px-24">
             <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-22">
 
                 {/* LEFT */}
@@ -77,80 +53,29 @@ const CoreFeatures = () => {
                         transactions has never been easier.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center lg:justify-start gap-3 w-full mt-1">  {/* Watch Tizer */}
-                        <button
-                            className="
-      flex items-center justify-center gap-2
-      bg-[#43495B] text-white
-      text-sm font-medium mb-1
-      px-5 h-[36px]
-      rounded-[14px]
-      shadow-sm
-      hover:bg-[#43495B]/85
-      hover:-translate-y-0.5
-      hover:shadow-md
-      transition-all duration-300
-      whitespace-nowrap
-      flex-none
-    "
-                        >
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center lg:justify-start gap-3 w-full mt-1">
+                        <button className="flex items-center justify-center gap-2 bg-[#43495B] text-white text-sm font-medium mb-1 px-5 h-[36px] rounded-[14px] shadow-sm hover:bg-[#43495B]/85 hover:-translate-y-0.5 hover:shadow-md transition-all duration-300 whitespace-nowrap flex-none">
                             <Play size={14} className="shrink-0" fill='white' />
                             <span className='mt-1'>Watch Tizer</span>
                         </button>
-
-                        {/* Contact Us */}
-                        <button
-                            className="
-      flex items-center justify-center gap-2
-      bg-white text-[#43495B]
-      border border-[#D9DCE5]
-      text-sm font-medium mb-1
-      px-5 h-[36px]
-      rounded-[14px]
-      hover:bg-[#F8F9FC]
-      hover:border-[#C7CBD6]
-      hover:-translate-y-0.5
-      hover:shadow-sm
-      transition-all duration-300
-      whitespace-nowrap
-      flex-none
-    "
-                        >
+                        <button className="flex items-center justify-center gap-2 bg-white text-[#43495B] border border-[#D9DCE5] text-sm font-medium mb-1 px-5 h-[36px] rounded-[14px] hover:bg-[#F8F9FC] hover:border-[#C7CBD6] hover:-translate-y-0.5 hover:shadow-sm transition-all duration-300 whitespace-nowrap flex-none">
                             <Phone size={15} className="shrink-0" />
                             <span className='mt-1'>Contact Us</span>
                         </button>
-
                     </div>
                 </div>
 
                 {/* RIGHT: feature grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 md:gap-x-20 gap-y-10 md:gap-y-14 flex-1">
                     {features.map((f) => (
-                        <div
-                            key={f.title}
-                            className="flex flex-col gap-3 items-center text-center lg:items-start lg:text-left py-2"
-                        >
+                        <div key={f.title} className="flex flex-col gap-3 items-center text-center lg:items-start lg:text-left py-2">
                             <div className="w-12 h-12 rounded-2xl bg-[#EBF0FE] flex items-center justify-center shrink-0">
-                                {f.title === "Pockets" ? (
-                                    <Image
-                                        src={Pocket}
-                                        alt="Pocket"
-                                        width={22}
-                                        height={22}
-                                        className="object-contain"
-                                    />
-                                ) : (
-                                    f.icon
-                                )}
+                                {f.icon === "pocket"
+                                    ? <Image src={Pocket} alt="Pocket" width={22} height={22} className="object-contain" />
+                                    : f.icon}
                             </div>
-
-                            <h3 className="text-lg font-semibold text-zinc-800">
-                                {f.title}
-                            </h3>
-
-                            <p className="text-sm text-zinc-400 leading-relaxed max-w-[300px]">
-                                {f.desc}
-                            </p>
+                            <h3 className="text-lg font-semibold text-zinc-800">{f.title}</h3>
+                            <p className="text-sm text-zinc-400 leading-relaxed max-w-[300px]">{f.desc}</p>
                         </div>
                     ))}
                 </div>

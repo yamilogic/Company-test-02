@@ -2,24 +2,6 @@
 
 import ContactForm from './ContactForm';
 
-/* ── Design tokens (desktop @ 1512px) ── */
-const SECTION = {
-    maxWidth: 1312,
-    height: 584,
-    screenMax: 1920,
-};
-
-const CONTENT = {
-    width: 535,
-    height: 423,
-    gap: 32,
-};
-
-const FORM = {
-    width: 535,
-};
-
-/* ── Contact info items ── */
 const INFO_ITEMS = [
     {
         label: 'E-Mail',
@@ -52,42 +34,33 @@ const INFO_ITEMS = [
     },
 ];
 
-/* ── Tablet design tokens ── */
-const TABLET = {
-    maxWidth: 794,
-    gap: 32,
-};
-
 export default function ConnectSection() {
     return (
         <section
             id="connect"
             className="w-full bg-zinc-50 px-4 sm:px-10 md:px-5 lg:px-24 py-12 sm:py-16 md:py-24"
-            style={{ maxWidth: `${SECTION.screenMax}px`, margin: '0 auto' }}
+            style={{ maxWidth: '1920px', margin: '0 auto' }}
         >
             <div
                 className="mx-auto flex flex-col md:items-center lg:items-start lg:flex-row lg:justify-between"
-                style={{ maxWidth: `${SECTION.maxWidth}px` }}
+                style={{ maxWidth: '1312px' }}
             >
                 {/* ── Left: Content ── */}
                 <div
                     className="flex flex-col w-full md:items-center lg:items-start mb-10 lg:mb-0 md:max-w-none lg:max-w-none"
-                    style={{ maxWidth: `${CONTENT.width}px`, gap: `${CONTENT.gap}px` }}
+                    style={{ maxWidth: '535px', gap: '32px' }}
                 >
-                    {/* Subtitle */}
                     <p className="text-sm text-zinc-400 md:text-center lg:text-left">We are here to help you...</p>
 
-                    {/* Heading */}
                     <h2 className="text-3xl md:text-4xl lg:text-[42px] font-bold text-zinc-900 leading-tight -mt-4 md:text-center lg:text-left">
                         <span className="text-[#5A81FA]">Discuss</span> Your Finance Solution Needs
                     </h2>
 
-                    {/* Description */}
                     <p className="text-sm text-zinc-400 leading-relaxed -mt-4 md:text-center lg:text-left" style={{ maxWidth: '420px' }}>
                         Simplify your payments with Riala Pay, Paying bills nad making transactions has never been easier.
                     </p>
 
-                    {/* Info items — vertical on mobile, horizontal row on tablet, vertical on desktop */}
+                    {/* Info items */}
                     <div className="flex flex-col gap-5 md:flex-row md:gap-8 md:justify-center lg:flex-col lg:gap-5 lg:justify-start">
                         {INFO_ITEMS.map((item) => (
                             <div key={item.label} className="flex items-center gap-4 md:gap-3 lg:gap-4">
@@ -104,10 +77,7 @@ export default function ConnectSection() {
                 </div>
 
                 {/* ── Right / Below: Contact Form ── */}
-                <div
-                    className="w-full md:mx-auto lg:mx-0"
-                    style={{ maxWidth: `${FORM.width}px` }}
-                >
+                <div className="w-full md:mx-auto lg:mx-0" style={{ maxWidth: '535px' }}>
                     <ContactForm />
                 </div>
             </div>

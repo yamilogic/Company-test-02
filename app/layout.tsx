@@ -1,23 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar"
 import FloatingMenu from "@/components/FloatingMenu"
 import Footer from "@/components/Footer"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -31,19 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.className} min-h-full flex flex-col`}
-    >
+    <html lang="en" className={`${inter.className} min-h-full flex flex-col`}>
       <body className="min-h-full flex flex-col">
-              <Navbar/>
+        <Navbar/>
         {children}
-        <div></div>
         <Footer/>
-
         <FloatingMenu/>
-        
-        </body>
+      </body>
     </html>
   );
 }
