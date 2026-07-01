@@ -1,42 +1,42 @@
 // Home
 import React from 'react'
-import Hero from "../home/Hero"
-import Marquee from "../Components/Marquee"
-import Download from "../home/Download"
-import CoreFeatures from "../home/CoreFeatures"
+import Navbar from "@/components/Navbar"
+import Hero from "@/sections/home/Hero"
+import Marquee from "@/components/CompanyShow"
+import Download from "@/sections/home/Download"
+import CoreFeatures from "@/sections/home/CoreFeatures"
+import WhyRiala from "@/sections/home/WhyRiala"
+import Reviews from "@/sections/home/Reviews";
+import CTABanner from "@/sections/home/CallToAction"
+import HowToStart from "@/sections/home/HowTo"
 
-import HowToStart from "../home/HowTo"
 
+import BlogPreview from '@/sections/home/BlogPreview';
+import ConnectSection from '@/components/ConnectSection';
+import FaqSection from '@/sections/home/FaqSection';
 
-import CTABanner from "../home/CallToAction"
-import Reviews from "../home/Reviews"
-import Blog from "../home/Blog"
-import Contact from "../home/Contact"
-import Navbar from "../Components/Navbar"
-import Faq from "../home/Faq"
-
-import Why from "../home/Why"
 
 const Home = () => {
   return (
-    
-    <div className='transition-all duration-300'>
-      
-      <Hero/>
-      <Marquee/>
-      <Download/>
-      <CoreFeatures/>
-      <Why/>
-      
-      <HowToStart/>
-      <CTABanner/>
-      <Reviews/>
-      <Blog/>
-      <Contact/>
 
-      <Faq/>
-      
-      </div>
+    <div className='transition-all duration-300'>
+
+      <Hero />
+      <Marquee />
+      <Download />
+      <CoreFeatures />
+      <WhyRiala />
+      <HowToStart />
+      <CTABanner />
+      <Reviews />
+      <BlogPreview />
+      <ConnectSection />
+      <FaqSection />
+
+
+
+
+    </div>
   )
 }
 
