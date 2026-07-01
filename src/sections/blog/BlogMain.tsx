@@ -132,9 +132,9 @@ export default function BlogMain() {
         <div className="min-h-screen bg-[#F3F4F6] relative overflow-hidden">
             {/* ── Background concentric arcs ── */}
             <div className="absolute left-1/2 -translate-x-1/2 top-0 pointer-events-none z-0 overflow-hidden w-full" style={{ height: '500px' }}>
-              <div className="absolute rounded-full border border-[#E0E2E8]" style={{ width: '120vw', height: '120vw', left: '50%', top: '-46vw', transform: 'translate(-50%, -50%)' }} />
-              <div className="absolute rounded-full border border-[#E0E2E8]" style={{ width: '108vw', height: '108vw', left: '50%', top: '-41.5vw', transform: 'translate(-50%, -50%)' }} />
-              <div className="absolute rounded-full border border-[#E0E2E8]" style={{ width: '96vw', height: '96vw', left: '50%', top: '-37vw', transform: 'translate(-50%, -50%)' }} />
+              <div className="absolute rounded-full border border-[#E0E2E8]" style={{ width: '120vw', height: '120vw', left: '50%', top: '-43.6vw', transform: 'translate(-50%, -50%)' }} />
+              <div className="absolute rounded-full border border-[#E0E2E8]" style={{ width: '108vw', height: '108vw', left: '50%', top: '-39.8vw', transform: 'translate(-50%, -50%)' }} />
+              <div className="absolute rounded-full border border-[#E0E2E8]" style={{ width: '96vw', height: '96vw', left: '50%', top: '-36vw', transform: 'translate(-50%, -50%)' }} />
             </div>
 
             <div className="max-w-[1312px] mx-auto px-4 sm:px-8 lg:px-6 pt-6 md:pt-10 pb-12 md:pb-20 relative z-10">
