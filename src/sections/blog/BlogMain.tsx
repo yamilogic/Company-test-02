@@ -131,10 +131,10 @@ export default function BlogMain() {
     return (
         <div className="min-h-screen bg-[#F3F4F6] relative overflow-hidden">
             {/* ── Background concentric arcs ── */}
-            <div className="absolute top-0 left-[75%] -translate-x-1/2 w-[1512px] h-[500px] pointer-events-none z-0 overflow-hidden flex justify-center">
+            <div className="absolute top-0 left-[75%] -translate-x-1/4 w-[2200px] h-[700px] pointer-events-none z-0 overflow-visible flex justify-center">
                 <div className="relative w-full h-full flex justify-center">
                     {[300, 450, 600, 750, 900, 1050].map((r, idx) => (
-                        <div key={idx} className="absolute rounded-full border border-gray-200/40" style={{ width: `${r * 2}px`, height: `${r * 2}px`, top: `-${r - 40}px` }} />
+                        <div key={idx} className="absolute rounded-full border border-[#E0E2E8]" style={{ width: `${r * 2}px`, height: `${r * 2}px`, top: `-${r - 80}px` }} />
                     ))}
                 </div>
             </div>
