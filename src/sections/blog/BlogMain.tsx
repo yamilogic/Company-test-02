@@ -131,17 +131,15 @@ export default function BlogMain() {
     return (
         <div className="min-h-screen bg-[#F3F4F6] relative overflow-hidden">
             {/* ── Background concentric arcs ── */}
-            <div className="absolute top-0 left-[75%] -translate-x-1/4 w-[2200px] h-[700px] pointer-events-none z-0 overflow-visible flex justify-center">
-                <div className="relative w-full h-full flex justify-center">
-                    {[300, 450, 600, 750, 900, 1050].map((r, idx) => (
-                        <div key={idx} className="absolute rounded-full border border-[#E0E2E8]" style={{ width: `${r * 2}px`, height: `${r * 2}px`, top: `-${r - 80}px` }} />
-                    ))}
-                </div>
+            <div className="absolute left-1/2 -translate-x-1/2 top-0 pointer-events-none z-0 overflow-hidden w-full" style={{ height: '500px' }}>
+              <div className="absolute rounded-full border border-[#E0E2E8]" style={{ width: '120vw', height: '120vw', left: '50%', top: '-36.51vw', transform: 'translate(-50%, -50%)' }} />
+              <div className="absolute rounded-full border border-[#E0E2E8]" style={{ width: '108vw', height: '108vw', left: '50%', top: '-34.13vw', transform: 'translate(-50%, -50%)' }} />
+              <div className="absolute rounded-full border border-[#E0E2E8]" style={{ width: '96vw', height: '96vw', left: '50%', top: '-32.08vw', transform: 'translate(-50%, -50%)' }} />
             </div>
 
-            <div className="max-w-[1312px] mx-auto px-4 sm:px-8 lg:px-6 py-12 md:py-20 relative z-10">
-                {/* Header */}
-                <header className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+            <div className="max-w-[1312px] mx-auto px-4 sm:px-8 lg:px-6 pt-6 md:pt-10 pb-12 md:pb-20 relative z-10">
+                {/* Header — pushed up, more space below */}
+                <header className="text-center max-w-3xl mx-auto mb-20 md:mb-28">
                     <h1 className="text-4xl md:text-5xl font-extrabold text-zinc-900 tracking-tight leading-tight">
                         Discover Educational <span className="text-[#5A81FA]">Articles</span> here
                     </h1>
