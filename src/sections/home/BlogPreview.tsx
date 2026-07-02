@@ -41,7 +41,7 @@ export default function BlogSection() {
                         return (
                             <div
                                 key={post.id}
-                                className={`relative overflow-hidden rounded-[24px] group cursor-pointer transition-transform duration-300 hover:scale-[1.01] hover:shadow-lg
+                                className={`relative overflow-hidden rounded-[24px] group cursor-pointer transition-transform duration-300 hover:scale-[1.01]
                                     ${isWide 
                                         ? 'col-span-1 md:col-span-8 h-[240px] md:h-[300px] lg:h-[330px] bg-[#d0d4e8]' 
                                         : 'col-span-1 md:col-span-4 h-[240px] md:h-[300px] lg:h-[330px] bg-[#eef0f6]'
