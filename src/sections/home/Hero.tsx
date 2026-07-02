@@ -37,11 +37,12 @@ const Hero = () => {
         <div className="flex flex-col items-center gap-4 pt-2">
           <h1 className="text-9xl mr-56 tracking-tight text-[#43495B]">Welcome</h1>
           <div className="flex gap-4 mr-20 ml-20">
-            <div className="relative mr-16 xl:mr-24 2xl:mr-28 mt-10 xl:mt-14 z-10">
+            <div className="relative mr-16 xl:mr-24 2xl:mr-28 mt-10 xl:mt-14 -translate-y-10 z-10">
               <div className="relative rounded-[2rem] shadow-xl shadow-zinc-300/60 overflow-visible bg-white w-[90px] h-[105px] xl:w-[115px] xl:h-[135px] 2xl:w-[135px] 2xl:h-[160px]">
-                <Image src={man} alt="man" width={160} height={200}
-                  className="absolute bottom-[7px] left-0 w-full object-cover object-top" />
+                <Image src={man} alt="man" width={180} height={190}
+                  className="absolute bottom-[1px] left-0 w-full object-cover object-top" />
               </div>
+
             </div>
             <h1 className="text-9xl ml-22 z-2 tracking-tight text-[#43495B]">To Riala</h1>
           </div>
