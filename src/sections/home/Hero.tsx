@@ -40,7 +40,7 @@ const Hero = () => {
             <div className="relative mr-16 xl:mr-24 2xl:mr-28 mt-10 xl:mt-14 z-10">
               <div className="relative rounded-[2rem] shadow-xl shadow-zinc-300/60 overflow-visible bg-white w-[90px] h-[105px] xl:w-[115px] xl:h-[135px] 2xl:w-[135px] 2xl:h-[160px]">
                 <Image src={man} alt="man" width={160} height={200}
-                  className="absolute bottom-0 left-0 w-full object-cover object-top" />
+                  className="absolute bottom-[7px] left-0 w-full object-cover object-top" />
               </div>
             </div>
             <h1 className="text-9xl ml-22 z-2 tracking-tight text-[#43495B]">To Riala</h1>
@@ -61,7 +61,7 @@ const Hero = () => {
 
           <div className="flex flex-col gap-4 z-20 relative xl:translate-y-22 lg:translate-y-22 xl:translate-x-26 lg:translate-x-52 md:lg:translate-x-72">            <div className="relative w-[95px] h-[100px] xl:w-[115px] xl:h-[120px] 2xl:w-[135px] 2xl:h-[140px] -translate-x-36 rounded-[22px] bg-[#FAFAFA] shadow-lg overflow-visible">
             <Image src={girl} alt="girl" width={150} height={180}
-              className="absolute -top-10 left-1/2 -translate-x-1/2 object-cover object-top drop-shadow-xl" />
+              className="absolute -top-10 -translate-y-[7px] left-1/2 -translate-x-1/2 object-cover object-top drop-shadow-xl" />
           </div>
             <div className="font-medium text-zinc-400 -translate-x-36 text-sm">
               Simplify your payment with Riala Pay, Paying bills and <br /> making transactions has never been easier.
