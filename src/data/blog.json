@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "How to get to know riala more and more b...",
+    "desc": "Simplify you payments with Riala Pay, Paying bills nad making tr...",
+    "image": "src/assets/All-req/fbdbbf7aa210c9cdc1b094f50d39fb159b216847.jpg",
+    "hasImage": true
+  },
+  {
+    "id": 2,
+    "title": "How to get to know riala more and more b...",
+    "desc": "Simplify you payments with Riala Pay, Paying bills nad making tr...",
+    "image": "src/assets/All-req/Group 14.svg",
+    "hasImage": false
+  },
+  {
+    "id": 3,
+    "title": "How to get to know riala more and more b...",
+    "desc": "Simplify you payments with Riala Pay, Paying bills nad making tr...",
+    "image": "src/assets/All-req/Group 14.svg",
+    "hasImage": false
+  },
+  {
+    "id": 4,
+    "title": "How to get to know riala more and more b...",
+    "desc": "Simplify you payments with Riala Pay, Paying bills nad making tr...",
+    "image": "src/assets/All-req/3023621879303a518b30a4ceb13054005cdd978a.png",
+    "hasImage": true
+  }
+]
