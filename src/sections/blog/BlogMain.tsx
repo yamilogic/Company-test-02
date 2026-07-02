@@ -131,9 +131,9 @@ export default function BlogMain() {
     return (
         <div className="min-h-screen bg-[#F3F4F6] overflow-x-clip">
             {/* ── Background concentric arcs ── */}
-            <div className="absolute rounded-full border border-[#E0E2E8] pointer-events-none z-[45]" style={{ width: '120vw', height: '120vw', left: '50%', top: '-43.6vw', transform: 'translate(-50%, -50%)' }} />
-            <div className="absolute rounded-full border border-[#E0E2E8] pointer-events-none z-[45]" style={{ width: '108vw', height: '108vw', left: '50%', top: '-39.8vw', transform: 'translate(-50%, -50%)' }} />
-            <div className="absolute rounded-full border border-[#E0E2E8] pointer-events-none z-[45]" style={{ width: '96vw', height: '96vw', left: '50%', top: '-36vw', transform: 'translate(-50%, -50%)' }} />
+            <div className="absolute rounded-full border border-[#E0E2E8] pointer-events-none z-[45] w-[120vw] h-[120vw] left-1/2 top-[-43.6vw] -translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute rounded-full border border-[#E0E2E8] pointer-events-none z-[45] w-[108vw] h-[108vw] left-1/2 top-[-39.8vw] -translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute rounded-full border border-[#E0E2E8] pointer-events-none z-[45] w-[96vw] h-[96vw] left-1/2 top-[-36vw] -translate-x-1/2 -translate-y-1/2" />
 
             <div className="max-w-[1312px] mx-auto px-[15px] pt-6 md:pt-10 pb-12 md:pb-20 relative z-[50]">
                 {/* Header — pushed up, more space below */}

@@ -3,17 +3,28 @@ import qr from "@/assets/why/qr.png"
 import account from "@/assets/why/account.png"
 import stats from "@/assets/why/Stats.png"
 
-const Circles = ({ top = "60%", translateY = true }: { top?: string; translateY?: boolean }) => (
-  <div className={`absolute left-1/2 -translate-x-1/2 pointer-events-none${translateY ? ' -translate-y-1/2' : ''}`} style={{ top }}>
-    {[300, 340, 380].map((size) => (
-      <div
-        key={size}
-        className="absolute rounded-full border border-[#E3E3E3]"
-        style={{ width: `${size}px`, height: `${size}px`, left: "50%", top: "50%", transform: "translate(-50%, -50%)" }}
-      />
-    ))}
-  </div>
-);
+const Circles = ({ top = "60%", translateY = true }: { top?: string; translateY?: boolean }) => {
+  const topClasses: Record<string, string> = {
+    "60%": "top-[60%]",
+    "95%": "top-[95%]",
+  };
+  const sizeClasses: Record<number, string> = {
+    300: "w-[300px] h-[300px]",
+    340: "w-[340px] h-[340px]",
+    380: "w-[380px] h-[380px]",
+  };
+
+  return (
+    <div className={`absolute left-1/2 -translate-x-1/2 pointer-events-none ${translateY ? '-translate-y-1/2' : ''} ${topClasses[top] || 'top-[60%]'}`}>
+      {[300, 340, 380].map((size) => (
+        <div
+          key={size}
+          className={`absolute rounded-full border border-[#E3E3E3] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size]}`}
+        />
+      ))}
+    </div>
+  );
+};
 
 const cardCls = "bg-white border border-zinc-200/50 shadow-sm h-100 lg:h-[500px] xl:h-[560px] rounded-2xl overflow-hidden flex flex-col px-16 lg:px-6 xl:px-8 transition-all duration-300";
 const imgCls = "object-cover mt-2 w-[200px] lg:w-[260px] xl:w-[300px] h-auto transition-all duration-300";
@@ -27,13 +38,21 @@ const WhyRiala = () => {
         {/* Dark Banner */}
         <div className="relative w-full h-100 lg:h-[450px] xl:h-[500px] bg-zinc-800 rounded-[1.5rem] pt-8 pb-24 overflow-hidden">
           {/* Arc rings */}
-          {[120, 180, 240, 300, 360].map((r, i) => (
-            <div
-              key={i}
-              className="absolute bottom-0 border border-white/[0.07] rounded-t-full"
-              style={{ width: r * 2, height: r, left: "50%", transform: "translateX(-50%)" }}
-            />
-          ))}
+          {[120, 180, 240, 300, 360].map((r, i) => {
+            const arcClasses: Record<number, string> = {
+              120: "w-[240px] h-[120px]",
+              180: "w-[360px] h-[180px]",
+              240: "w-[480px] h-[240px]",
+              300: "w-[600px] h-[300px]",
+              360: "w-[720px] h-[360px]",
+            };
+            return (
+              <div
+                key={i}
+                className={`absolute bottom-0 border border-white/[0.07] rounded-t-full left-1/2 -translate-x-1/2 ${arcClasses[r]}`}
+              />
+            );
+          })}
 
           <div className="relative z-10 flex flex-col items-center text-center gap-1 px-4">
             <p className="font-medium text-zinc-500 text-xs tracking-widest">

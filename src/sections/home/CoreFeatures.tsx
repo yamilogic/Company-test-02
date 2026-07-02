@@ -35,8 +35,11 @@ const CoreFeatures = () => {
                         Here's How We Are{" "}
                         <span className="relative inline-block overflow-hidden bg-[#CBD7FD] text-[#5A81FA] px-2 py-1 rounded-full h-[52px] align-middle">
                             <div
-                                className="transition-transform duration-700 ease-in-out"
-                                style={{ transform: `translateY(-${currentWord * 52}px)` }}
+                                className={`transition-transform duration-700 ease-in-out ${
+                                    currentWord === 0 ? "translate-y-0" :
+                                    currentWord === 1 ? "translate-y-[-52px]" :
+                                    "translate-y-[-104px]"
+                                }`}
                             >
                                 {words.map((word) => (
                                     <div key={word} className="h-[52px] flex items-center justify-center font-semibold">

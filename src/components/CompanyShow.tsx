@@ -37,7 +37,7 @@ const MarqueeTrack = ({ gap = "gap-10" }: { gap?: string }) => {
   const all = [...partners, ...partners, ...partners];
   return (
     <div className="overflow-hidden flex-1">
-      <div className={`flex items-center ${gap} animate-marquee whitespace-nowrap`}>
+      <div className={`flex items-center ${gap} animate-marquee w-max whitespace-nowrap`}>
         {all.map((p, i) => <Logo key={i} p={p} />)}
       </div>
     </div>
@@ -63,17 +63,6 @@ const Partners = () => (
       <div className="w-full h-px bg-zinc-200" />
       <MarqueeTrack gap="gap-6 md:gap-8" />
     </div>
-
-    <style>{`
-      @keyframes marquee {
-        0%   { transform: translateX(0); }
-        100% { transform: translateX(-33.333%); }
-      }
-      .animate-marquee {
-        animation: marquee 18s linear infinite;
-        width: max-content;
-      }
-    `}</style>
   </div>
 );
 

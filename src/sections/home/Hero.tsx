@@ -17,8 +17,8 @@ const ContactBtn = ({ cls = "" }: { cls?: string }) => (
   </div>
 );
 
-const Circle = ({ size, cls = "", style = {} }: { size: number | string; cls?: string; style?: React.CSSProperties }) => (
-  <div className={`absolute rounded-full pointer-events-none ${cls}`} style={{ width: typeof size === 'number' ? `${size}px` : size, height: typeof size === 'number' ? `${size}px` : size, ...style }} />
+const Circle = ({ cls = "" }: { cls?: string }) => (
+  <div className={`absolute rounded-full pointer-events-none ${cls}`} />
 );
 
 const Hero = () => {
@@ -29,9 +29,9 @@ const Hero = () => {
       <div className="hidden lg:block relative">
 
         {/* Background circles */}
-        <Circle size="clamp(1200px, 80vw, 1550px)" cls="left-1/2 -translate-x-1/2 top-[55%] -translate-y-1/2 border border-zinc-300/50 z-[51]" />
-        <Circle size="clamp(740px, 40vw, 740px)" cls="left-[48%] -translate-x-1/2 top-[55%] -translate-y-1/2 z-[-0] border border-zinc-300/40" />
-        <Circle size="clamp(370px, 23vw, 430px)" cls="left-[47%] -translate-x-1/2 top-[62%] -translate-y-1/2 bg-zinc-50" />
+        <Circle cls="w-[clamp(1200px,80vw,1550px)] h-[clamp(1200px,80vw,1550px)] left-1/2 -translate-x-1/2 top-[55%] -translate-y-1/2 border border-zinc-300/50 z-[51]" />
+        <Circle cls="w-[clamp(740px,40vw,740px)] h-[clamp(740px,40vw,740px)] left-[48%] -translate-x-1/2 top-[55%] -translate-y-1/2 z-[-0] border border-zinc-300/40" />
+        <Circle cls="w-[clamp(370px,23vw,430px)] h-[clamp(370px,23vw,430px)] left-[47%] -translate-x-1/2 top-[62%] -translate-y-1/2 bg-zinc-50" />
 
         {/* Title */}
         <div className="flex flex-col items-center gap-4 pt-2">
@@ -77,21 +77,21 @@ const Hero = () => {
       {/* ── TABLET (md to lg) ── */}
       <div className="hidden md:flex lg:hidden flex-col w-full">
 
-        <div className="relative w-full flex items-end justify-center" style={{ minHeight: '580px' }}>
+        <div className="relative w-full flex items-end justify-center min-h-[580px]">
 
           {/* Title */}
           <div className="absolute top-6 left-0 right-0 flex flex-col items-center z-0 pointer-events-none select-none">
-            <h1 className=" tracking-tight text-[#43495B] leading-none text-center mr-52" style={{ fontSize: 'clamp(4rem, 12vw, 7rem)' }}>Welcome</h1>
-            <h1 className=" tracking-tight text-[#43495B] leading-none text-center ml-22" style={{ fontSize: 'clamp(4rem, 12vw, 7rem)' }}>To Riala</h1>
+            <h1 className=" tracking-tight text-[#43495B] leading-none text-center mr-52 text-[clamp(4rem,12vw,7rem)]">Welcome</h1>
+            <h1 className=" tracking-tight text-[#43495B] leading-none text-center ml-22 text-[clamp(4rem,12vw,7rem)]">To Riala</h1>
           </div>
 
           {/* Circles */}
-          <Circle size="clamp(500px, 75vw, 700px)" cls="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-zinc-300/50 z-[51]" />
-          <Circle size="clamp(330px, 48vw, 460px)" cls="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-zinc-300/40 bg-zinc-50/20 z-10" />
-          <Circle size="clamp(280px, 42vw, 400px)" cls="top-[68%] left-[47%] -translate-x-1/2 -translate-y-1/2 bg-zinc-50 z-10" />
+          <Circle cls="w-[clamp(500px,75vw,700px)] h-[clamp(500px,75vw,700px)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-zinc-300/50 z-[51]" />
+          <Circle cls="w-[clamp(330px,48vw,460px)] h-[clamp(330px,48vw,460px)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-zinc-300/40 bg-zinc-50/20 z-10" />
+          <Circle cls="w-[clamp(280px,42vw,400px)] h-[clamp(280px,42vw,400px)] top-[68%] left-[47%] -translate-x-1/2 -translate-y-1/2 bg-zinc-50 z-10" />
 
           {/* Main phone */}
-          <div className="relative z-30 mb-0" style={{ transform: 'translateX(-12%) translateY(5%)' }}>
+          <div className="relative z-30 mb-0 translate-x-[-12%] translate-y-[5%]">
             <Image src={mobile2} alt="Riala App" width={260} height={433} className="object-contain drop-shadow-2xl rounded-[2.5rem]" />
           </div>
         </div>
@@ -111,7 +111,7 @@ const Hero = () => {
       {/* ── MOBILE (below md) ── */}
       <div className="flex md:hidden flex-col w-full">
 
-        <div className="relative w-full flex items-end justify-center" style={{ minHeight: '420px' }}>
+        <div className="relative w-full flex items-end justify-center min-h-[420px]">
 
           {/* Title */}
           <div className="absolute -top-2 left-0 right-0 flex flex-col items-center z-0 pointer-events-none select-none">
@@ -120,12 +120,12 @@ const Hero = () => {
           </div>
 
           {/* Circles */}
-          <Circle size="clamp(320px, 90vw, 500px)" cls="top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 border border-zinc-300/50 z-[51]" />
-          <Circle size="clamp(300px, 85vw, 480px)" cls="top-[82%] left-1/2 -translate-x-1/2 -translate-y-1/2 border bg-zinc-100/10 border-zinc-300/40 z-10" />
-          <Circle size="clamp(200px, 60vw, 300px)" cls="top-[68%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-zinc-50/60 z-10" />
+          <Circle cls="w-[clamp(320px,90vw,500px)] h-[clamp(320px,90vw,500px)] top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 border border-zinc-300/50 z-[51]" />
+          <Circle cls="w-[clamp(300px,85vw,480px)] h-[clamp(300px,85vw,480px)] top-[82%] left-1/2 -translate-x-1/2 -translate-y-1/2 border bg-zinc-100/10 border-zinc-300/40 z-10" />
+          <Circle cls="w-[clamp(200px,60vw,300px)] h-[clamp(200px,60vw,300px)] top-[68%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-zinc-50/60 z-10" />
 
           {/* Main phone */}
-          <div className="relative z-30 top-2" style={{ transform: 'translateX(-8%)' }}>
+          <div className="relative z-30 top-2 translate-x-[-8%]">
             <Image src={mobile2} alt="Riala App" width={195} height={325} className="object-contain rounded-[2rem]" />
           </div>
         </div>

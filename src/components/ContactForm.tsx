@@ -71,15 +71,7 @@ export default function ContactForm() {
     return (
         <form
             onSubmit={handleSubmit}
-            className="w-full bg-white flex flex-col"
-            style={{
-                width: '100%',
-                minWidth: 0,
-                padding: `${TOKENS.padding}px`,
-                gap: `${TOKENS.innerGap}px`,
-                borderRadius: TOKENS.borderRadius,
-                border: `1px solid ${TOKENS.borderColor}`,
-            }}
+            className="w-full bg-white flex flex-col min-w-0 p-[40px] gap-[24px] rounded-[12px] border border-[#E0E2E8]"
         >
             {/* Input fields */}
             {FIELDS.map((f) => (
@@ -115,8 +107,7 @@ export default function ContactForm() {
                 disabled={status === 'sending'}
                 className="h-12 w-full rounded-lg font-semibold text-sm text-white flex items-center justify-center gap-2
                            transition-all duration-200 cursor-pointer
-                           disabled:opacity-60 disabled:cursor-not-allowed"
-                style={{ backgroundColor: TOKENS.accent }}
+                           disabled:opacity-60 disabled:cursor-not-allowed bg-[#5A81FA]"
             >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                     <path d="m22 2-7 20-4-9-9-4 20-7z" />

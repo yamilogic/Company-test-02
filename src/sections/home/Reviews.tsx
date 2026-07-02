@@ -42,41 +42,19 @@ function ChevronIcon({ direction = "left" }: { direction?: "left" | "right" }) {
 function BackgroundArcs() {
   return (
     <div
-      className="absolute left-1/2 -translate-x-1/2 top-0 pointer-events-none z-0 overflow-hidden w-full"
-      style={{ height: '330px' }}
+      className="absolute left-1/2 -translate-x-1/2 top-0 pointer-events-none z-0 overflow-hidden w-full h-[330px]"
     >
       {/* Big Circle */}
       <div
-        className="absolute rounded-full border border-[#E0E2E8]"
-        style={{
-          width: '96.83vw',
-          height: '96.83vw',
-          left: '50%',
-          top: '-36.51vw',
-          transform: 'translate(-50%, -50%)'
-        }}
+        className="absolute rounded-full border border-[#E0E2E8] w-[96.83vw] h-[96.83vw] left-1/2 top-[-36.51vw] -translate-x-1/2 -translate-y-1/2"
       />
       {/* Medium Circle */}
       <div
-        className="absolute rounded-full border border-[#E0E2E8]"
-        style={{
-          width: '85.45vw',
-          height: '85.45vw',
-          left: '50%',
-          top: '-34.13vw',
-          transform: 'translate(-50%, -50%)'
-        }}
+        className="absolute rounded-full border border-[#E0E2E8] w-[85.45vw] h-[85.45vw] left-1/2 top-[-34.13vw] -translate-x-1/2 -translate-y-1/2"
       />
       {/* Small Circle */}
       <div
-        className="absolute rounded-full border border-[#E0E2E8]"
-        style={{
-          width: '74.74vw',
-          height: '74.74vw',
-          left: '50%',
-          top: '-32.08vw',
-          transform: 'translate(-50%, -50%)'
-        }}
+        className="absolute rounded-full border border-[#E0E2E8] w-[74.74vw] h-[74.74vw] left-1/2 top-[-32.08vw] -translate-x-1/2 -translate-y-1/2"
       />
     </div>
   );

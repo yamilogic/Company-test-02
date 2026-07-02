@@ -26,14 +26,20 @@ export default function FooterSection() {
 
         {/* Arc rings */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="relative" style={{ width: 0, height: 0 }}>
-            {[100, 160, 220].map((r, i) => (
-              <div
-                key={i}
-                className="absolute rounded-full border border-gray-200"
-                style={{ width: r * 2, height: r * 2, top: -r, left: -r }}
-              />
-            ))}
+          <div className="relative w-0 h-0">
+            {[100, 160, 220].map((r, i) => {
+              const ringClasses: Record<number, string> = {
+                100: "w-[200px] h-[200px] top-[-100px] left-[-100px]",
+                160: "w-[320px] h-[320px] top-[-160px] left-[-160px]",
+                220: "w-[440px] h-[440px] top-[-220px] left-[-220px]",
+              };
+              return (
+                <div
+                  key={i}
+                  className={`absolute rounded-full border border-gray-200 ${ringClasses[r]}`}
+                />
+              );
+            })}
           </div>
         </div>
 

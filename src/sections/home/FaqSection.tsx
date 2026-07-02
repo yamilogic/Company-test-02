@@ -101,8 +101,7 @@ export default function FaqSection() {
             className="w-full bg-zinc-50 px-4 sm:px-6 md:px-10 lg:px-24 py-12 sm:py-16 md:py-24"
         >
             <div
-                className="mx-auto"
-                style={{ maxWidth: `${TOKENS.desktop.width}px` }}
+                className="mx-auto max-w-[868px]"
             >
                 {/* Title */}
                 <h2 className="text-3xl sm:text-4xl md:text-[42px] font-bold text-zinc-900 text-center leading-tight">
