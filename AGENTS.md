@@ -1,12 +1,3 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
-
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
-
-
-
-
 import Image from 'next/image';
 import HandMobile from "@/assets/hero/HandMobile.png"
 import mobile2 from "@/assets/hero/Mobile2.png"
@@ -39,17 +30,17 @@ const Hero = () => {
 
         {/* Background circles */}
         <Circle size={1200} cls="left-1/2 -translate-x-1/2 top-[55%] -translate-y-1/2 border border-zinc-300/50" />
-        <Circle size={685} cls="left-[48%] -translate-x-1/2 top-[55%] -translate-y-1/2 z-[-0] border border-zinc-300/40" />
+        <Circle size={730} cls="left-[48%] -translate-x-1/2 top-[55%] -translate-y-1/2 z-[-0] border border-zinc-300/40" />
         <Circle size={430} cls="left-[47%] -translate-x-1/2 top-[62%] -translate-y-1/2 bg-zinc-50" />
 
         {/* Title */}
         <div className="flex flex-col items-center gap-4 pt-2">
           <h1 className="text-9xl mr-56 tracking-tight text-[#43495B]">Welcome</h1>
           <div className="flex gap-4 mr-20 ml-20">
-            <div className="relative mr-28 mt-14 z-10">
-              <div className="relative rounded-[2rem] shadow-xl shadow-zinc-300/60 overflow-visible bg-white w-[80px] h-[95px]">
-                <Image src={man} alt="man" width={116} height={144}
-                  className="absolute bottom-0 left-0 w-full object-cover object-top" />
+            <div className="relative mr-16 xl:mr-24 2xl:mr-28 mt-10 xl:mt-14 -translate-y-10 z-10">
+              <div className="relative rounded-[2rem] shadow-xl shadow-zinc-300/60 overflow-visible bg-white w-[90px] h-[90px] xl:w-[115px] xl:h-[115px] 2xl:w-[135px] 2xl:h-[135px]">
+                <Image src={man} alt="man" width={180} height={190}
+                  className="absolute bottom-[1px] left-0 w-full object-cover object-top" />
               </div>
             </div>
             <h1 className="text-9xl ml-22 z-2 tracking-tight text-[#43495B]">To Riala</h1>
@@ -68,9 +59,9 @@ const Hero = () => {
             width={440}
             height={440} />
 
-          <div className="flex flex-col gap-4 z-20 relative xl:translate-y-22 lg:translate-y-22 xl:translate-x-26 lg:translate-x-52 md:lg:translate-x-72">            <div className="relative w-[95px] h-[100px] -translate-x-36 rounded-[22px] bg-[#FAFAFA] shadow-lg overflow-visible">
-            <Image src={girl} alt="girl" width={100} height={130}
-              className="absolute -top-10 left-1/2 -translate-x-1/2 object-cover object-top drop-shadow-xl" />
+          <div className="flex flex-col gap-4 z-20 relative xl:translate-y-22 lg:translate-y-22 xl:translate-x-26 lg:translate-x-52 md:lg:translate-x-72">            <div className="relative w-[95px] h-[100px] xl:w-[115px] xl:h-[120px] 2xl:w-[135px] 2xl:h-[140px] -translate-x-36 rounded-[22px] bg-[#FAFAFA] shadow-lg overflow-visible">
+            <Image src={girl} alt="girl" width={150} height={180}
+              className="absolute -top-10 -translate-y-[7px] left-1/2 -translate-x-1/2 object-cover object-top drop-shadow-xl" />
           </div>
             <div className="font-medium text-zinc-400 -translate-x-36 text-sm">
               Simplify your payment with Riala Pay, Paying bills and <br /> making transactions has never been easier.

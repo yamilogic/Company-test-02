@@ -22,7 +22,7 @@ export default function FooterSection() {
 
       {/* Phone + arc rings — desktop dimensions untouched */}
       {!isBlogPage && (
-        <div className="relative w-full flex justify-center items-end overflow-hidden bg-white pt-12 h-[260px] sm:h-[360px]">
+        <div className="relative w-full flex justify-center items-end overflow-x-clip bg-white pt-12 h-[260px] sm:h-[360px]">
 
         {/* Arc rings */}
         <div className="absolute inset-0 flex items-center justify-center">

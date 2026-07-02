@@ -17,21 +17,21 @@ const ContactBtn = ({ cls = "" }: { cls?: string }) => (
   </div>
 );
 
-const Circle = ({ size, cls = "", style = {} }: { size: number; cls?: string; style?: React.CSSProperties }) => (
-  <div className={`absolute rounded-full pointer-events-none ${cls}`} style={{ width: `${size}px`, height: `${size}px`, ...style }} />
+const Circle = ({ size, cls = "", style = {} }: { size: number | string; cls?: string; style?: React.CSSProperties }) => (
+  <div className={`absolute rounded-full pointer-events-none ${cls}`} style={{ width: typeof size === 'number' ? `${size}px` : size, height: typeof size === 'number' ? `${size}px` : size, ...style }} />
 );
 
 const Hero = () => {
   return (
-    <div className="w-full font-inter mt-4 lg:lg:min-h-[calc(100vh+4rem)] bg-zinc-100 overflow-hidden">
+    <div className="w-full font-inter mt-4 lg:lg:min-h-[calc(100vh+4rem)] bg-zinc-100 overflow-x-clip">
 
       {/* ── DESKTOP (lg+) ── */}
       <div className="hidden lg:block relative">
 
         {/* Background circles */}
-        <Circle size={1200} cls="left-1/2 -translate-x-1/2 top-[55%] -translate-y-1/2 border border-zinc-300/50" />
-        <Circle size={685} cls="left-[48%] -translate-x-1/2 top-[55%] -translate-y-1/2 z-[-0] border border-zinc-300/40" />
-        <Circle size={430} cls="left-[47%] -translate-x-1/2 top-[62%] -translate-y-1/2 bg-zinc-50" />
+        <Circle size="clamp(1200px, 80vw, 1550px)" cls="left-1/2 -translate-x-1/2 top-[55%] -translate-y-1/2 border border-zinc-300/50 z-[51]" />
+        <Circle size="clamp(740px, 40vw, 740px)" cls="left-[48%] -translate-x-1/2 top-[55%] -translate-y-1/2 z-[-0] border border-zinc-300/40" />
+        <Circle size="clamp(370px, 23vw, 430px)" cls="left-[47%] -translate-x-1/2 top-[62%] -translate-y-1/2 bg-zinc-50" />
 
         {/* Title */}
         <div className="flex flex-col items-center gap-4 pt-2">
@@ -86,9 +86,9 @@ const Hero = () => {
           </div>
 
           {/* Circles */}
-          <Circle size={700} cls="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-zinc-300/50 z-10" />
-          <Circle size={460} cls="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-zinc-300/40 bg-zinc-50/20 z-10" />
-          <Circle size={400} cls="top-[68%] left-[47%] -translate-x-1/2 -translate-y-1/2 bg-zinc-50 z-10" />
+          <Circle size="clamp(500px, 75vw, 700px)" cls="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-zinc-300/50 z-[51]" />
+          <Circle size="clamp(330px, 48vw, 460px)" cls="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-zinc-300/40 bg-zinc-50/20 z-10" />
+          <Circle size="clamp(280px, 42vw, 400px)" cls="top-[68%] left-[47%] -translate-x-1/2 -translate-y-1/2 bg-zinc-50 z-10" />
 
           {/* Main phone */}
           <div className="relative z-30 mb-0" style={{ transform: 'translateX(-12%) translateY(5%)' }}>
@@ -120,9 +120,9 @@ const Hero = () => {
           </div>
 
           {/* Circles */}
-          <Circle size={500} cls="top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 border border-zinc-300/50 z-10" />
-          <Circle size={480} cls="top-[82%] left-1/2 -translate-x-1/2 -translate-y-1/2 border bg-zinc-100/10 border-zinc-300/40 z-10" />
-          <Circle size={300} cls="top-[68%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-zinc-50/60 z-10" />
+          <Circle size="clamp(320px, 90vw, 500px)" cls="top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 border border-zinc-300/50 z-[51]" />
+          <Circle size="clamp(300px, 85vw, 480px)" cls="top-[82%] left-1/2 -translate-x-1/2 -translate-y-1/2 border bg-zinc-100/10 border-zinc-300/40 z-10" />
+          <Circle size="clamp(200px, 60vw, 300px)" cls="top-[68%] left-1/2 -translate-x-1/2 -translate-y-1/2 bg-zinc-50/60 z-10" />
 
           {/* Main phone */}
           <div className="relative z-30 top-2" style={{ transform: 'translateX(-8%)' }}>
