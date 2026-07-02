@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F3F4F6;
+  /* --foreground: #171717; */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --animate-marquee: marquee 18s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.333%); }
+  }
+}
