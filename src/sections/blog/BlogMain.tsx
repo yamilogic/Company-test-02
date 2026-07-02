@@ -135,7 +135,7 @@ export default function BlogMain() {
             <div className="absolute rounded-full border border-[#E0E2E8] pointer-events-none z-[45]" style={{ width: '108vw', height: '108vw', left: '50%', top: '-39.8vw', transform: 'translate(-50%, -50%)' }} />
             <div className="absolute rounded-full border border-[#E0E2E8] pointer-events-none z-[45]" style={{ width: '96vw', height: '96vw', left: '50%', top: '-36vw', transform: 'translate(-50%, -50%)' }} />
 
-            <div className="max-w-[1312px] mx-auto px-4 sm:px-8 lg:px-6 pt-6 md:pt-10 pb-12 md:pb-20 relative z-[50]">
+            <div className="max-w-[1312px] mx-auto px-[15px] pt-6 md:pt-10 pb-12 md:pb-20 relative z-[50]">
                 {/* Header — pushed up, more space below */}
                 <header className="text-center max-w-3xl mx-auto mb-20 md:mb-28">
                     <h1 className="text-4xl md:text-5xl font-extrabold text-zinc-900 tracking-tight leading-tight">

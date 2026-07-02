@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Logo from "@/assets/brand/Logo.png"
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 import { Download } from 'lucide-react';
 
@@ -33,14 +34,22 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScrollPos, menuOpen]);
 
+  const pathname = usePathname();
+  const isBlog = pathname === "/blog";
+
   return (
-    <nav className={`sticky top-0 font-['Inter'] transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"
-      }`}>
-      {/* Background layer */}
-      <div className="absolute inset-0 bg-[#F3F4F6] border-b border-gray-100 z-[40]" />
+    <nav className={isBlog 
+      ? `sticky top-0 font-['Inter'] transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"}`
+      : `bg-[#F3F4F6] border-b border-gray-100 sticky top-0 z-50 font-['Inter'] transition-transform duration-300 ${visible ? "translate-y-0" : "-translate-y-full"}`
+    }>
+      {/* Background layer (only for blog page) */}
+      {isBlog && <div className="absolute inset-0 bg-[#F3F4F6] border-b border-gray-100 z-[40]" />}
 
       {/* Content layer */}
-      <div className="relative z-[55] max-w-[1312px] mx-auto px-4 sm:px-8 lg:px-6 flex items-center justify-between h-[102px]">
+      <div className={isBlog 
+        ? "relative z-[55] max-w-[1312px] mx-auto px-[15px] flex items-center justify-between h-[102px]"
+        : "max-w-8xl mx-auto px-2 sm:px-20 flex items-center justify-between h-[102px]"
+      }>
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
           <Image
@@ -116,8 +125,10 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       <div
-        className={`relative z-[55] md:hidden overflow-hidden transition-all duration-300 ease-in-out border-t border-gray-100 ${menuOpen ? "max-h-[400px]" : "max-h-0"
-          }`}
+        className={isBlog 
+          ? `relative z-[55] md:hidden overflow-hidden transition-all duration-300 ease-in-out border-t border-gray-100 ${menuOpen ? "max-h-[400px]" : "max-h-0"}`
+          : `md:hidden overflow-hidden transition-all duration-300 ease-in-out border-t border-gray-100 ${menuOpen ? "max-h-[400px]" : "max-h-0"}`
+        }
       >
         <ul className="px-4 py-3 flex flex-col gap-1">
           {navLinks.map((link) => (
