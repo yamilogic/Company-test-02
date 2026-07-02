@@ -37,9 +37,9 @@ const Hero = () => {
         <div className="flex flex-col items-center gap-4 pt-2">
           <h1 className="text-9xl mr-56 tracking-tight text-[#43495B]">Welcome</h1>
           <div className="flex gap-4 mr-20 ml-20">
-            <div className="relative mr-28 mt-14 z-10">
-              <div className="relative rounded-[2rem] shadow-xl shadow-zinc-300/60 overflow-visible bg-white w-[80px] h-[95px]">
-                <Image src={man} alt="man" width={116} height={144}
+            <div className="relative mr-16 xl:mr-24 2xl:mr-28 mt-10 xl:mt-14 z-10">
+              <div className="relative rounded-[2rem] shadow-xl shadow-zinc-300/60 overflow-visible bg-white w-[90px] h-[105px] xl:w-[115px] xl:h-[135px] 2xl:w-[135px] 2xl:h-[160px]">
+                <Image src={man} alt="man" width={160} height={200}
                   className="absolute bottom-0 left-0 w-full object-cover object-top" />
               </div>
             </div>
@@ -59,8 +59,8 @@ const Hero = () => {
             width={440}
             height={440} />
 
-          <div className="flex flex-col gap-4 z-20 relative xl:translate-y-22 lg:translate-y-22 xl:translate-x-26 lg:translate-x-52 md:lg:translate-x-72">            <div className="relative w-[95px] h-[100px] -translate-x-36 rounded-[22px] bg-[#FAFAFA] shadow-lg overflow-visible">
-            <Image src={girl} alt="girl" width={100} height={130}
+          <div className="flex flex-col gap-4 z-20 relative xl:translate-y-22 lg:translate-y-22 xl:translate-x-26 lg:translate-x-52 md:lg:translate-x-72">            <div className="relative w-[95px] h-[100px] xl:w-[115px] xl:h-[120px] 2xl:w-[135px] 2xl:h-[140px] -translate-x-36 rounded-[22px] bg-[#FAFAFA] shadow-lg overflow-visible">
+            <Image src={girl} alt="girl" width={150} height={180}
               className="absolute -top-10 left-1/2 -translate-x-1/2 object-cover object-top drop-shadow-xl" />
           </div>
             <div className="font-medium text-zinc-400 -translate-x-36 text-sm">
