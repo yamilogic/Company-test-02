@@ -104,10 +104,10 @@ const ImageCard = ({
       )}
 
       <div className="absolute bottom-0 left-0 right-0 p-4 z-10">
-        <h3 className={`text-sm sm:text-base font-semibold leading-snug ${imgLoaded && !imgError ? 'text-white' : 'text-zinc-800'}`}>
+        <h3 className="text-sm sm:text-base font-semibold leading-snug text-white">
           {post.title}
         </h3>
-        <p className={`text-xs mt-1 leading-relaxed line-clamp-1 ${imgLoaded && !imgError ? 'text-white/70' : 'text-zinc-500'}`}>
+        <p className="text-xs mt-1 leading-relaxed line-clamp-1 text-white/70">
           {post.desc}
         </p>
       </div>
